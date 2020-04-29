@@ -5,12 +5,6 @@ const videos = [
               "thumb" : "images/BigBuckBunny.jpg",
               "title" : "Big Buck Bunny"
             },
-            { "description" : "The first Blender Open Movie from 2006",
-              "sources" : [ "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" ],
-              "subtitle" : "By Blender Foundation",
-              "thumb" : "images/ElephantsDream.jpg",
-              "title" : "Elephant Dream"
-            },
             { "description" : "HBO GO now works with Chromecast -- the easiest way to enjoy online video on your TV. For when you want to settle into your Iron Throne to watch the latest episodes. For $35.\nLearn how to use Chromecast with HBO GO and more at google.com/chromecast.",
               "sources" : [ "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" ],
               "subtitle" : "By Google",
@@ -70,6 +64,12 @@ const videos = [
               "subtitle" : "By Garage419",
               "thumb" : "images/WeAreGoingOnBullrun.jpg",
               "title" : "We Are Going On Bullrun"
+            },
+		{ "description" : "The Smoking Tire heads out to Adams Motorsports Park in Riverside, CA to test the most requested car of 2010, the Volkswagen GTI. Will it beat the Mazdaspeed3's standard-setting lap time? Watch and see...",
+              "sources" : [ "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4" ],
+              "subtitle" : "By Garage419",
+              "thumb" : "images/VolkswagenGTIReview.jpg",
+              "title" : "Volkswagen GTI Review"
             },
     ];
 let start = 0, end = 4;
