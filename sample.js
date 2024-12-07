@@ -1,18 +1,18 @@
-const mysql = require('mysql');
+let base64 = require('base-64');
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root', // BAD: Hardcoded username
-    password: 'password', // BAD: Hardcoded password
-    database: 'mydatabase'
-});
+let url = 'http://example.org/auth';
+let username = 'user';
+let password = 'passwd';
 
-connection.connect((err) => {
-    if (err) {
-        console.error('Error connecting: ' + err.stack);
-        return;
-    }
-    console.log('Connected as id ' + connection.threadId);
-});
+let headers = new Headers();
 
-connection.end();
+headers.append('Content-Type', 'text/json');
+headers.append('Authorization', 'Basic' + base64.encode(username + ":" + password));
+
+fetch(url, {
+          method:'GET',
+          headers: headers
+       })
+.then(response => response.json())
+.then(json => console.log(json))
+.done();
