@@ -105,3 +105,14 @@ setInterval(() => {
    }
   });
 }, 10 * 1000);
+
+const DOMPurify = require('dompurify');
+
+function sanitizeInput(input) {
+    // GOOD: Use a library like DOMPurify to sanitize HTML
+    return DOMPurify.sanitize(input);
+}
+
+const userInput = '<script>alert("XSS Attack!")</script>';
+const sanitizedInput = sanitizeInput(userInput);
+console.log(sanitizedInput); // Output: (empty string)
